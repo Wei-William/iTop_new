@@ -599,6 +599,7 @@ void __init smp_setup_processor_id(void)
 	set_my_cpu_offset(0);
 
 	pr_info("Booting Linux on physical CPU 0x%x\n", mpidr);
+	pr_info("This is myself kernel32 %x\n", mpidr);
 }
 
 struct mpidr_hash mpidr_hash;

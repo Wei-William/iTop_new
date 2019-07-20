@@ -104,6 +104,7 @@ void __init smp_setup_processor_id(void)
 	 */
 	set_my_cpu_offset(0);
 	pr_info("Booting Linux on physical CPU 0x%lx\n", (unsigned long)mpidr);
+	pr_info("This is myself kernel64 0x%lx\n", (unsigned long)mpidr);
 }
 
 bool arch_match_cpu_phys_id(int cpu, u64 phys_id)
