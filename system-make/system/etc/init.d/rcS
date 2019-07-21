@@ -63,8 +63,13 @@ syslogd
 #echo "*************************************" 
 
 
+if [ ! -d /mnt/disk ]
+then
 mkdir /mnt/disk
+fi
 
 sleep 1
 /sbin/ifconfig lo 127.0.0.1
 /etc/init.d/ifconfig-eth0
+
+mount -t nfs -o nolock 192.168.1.2:/home/linux/minilinux /share
