@@ -24,3 +24,11 @@ else
 	cp linux-4.14.2_iTop-4412_scp/arch/arm/boot/dts/exynos4412-itop-elite.dtb /mnt/hgfs/fastboot/
 	echo "copy exynos4412-itop-elite.dtb to fastboot succeed !!!"
 fi
+
+if [ ! -f system-make/system.img ]
+then
+	echo "cannot find system !!!"
+else
+	cp system-make/system.img /mnt/hgfs/fastboot/
+	echo "copy system.img to fastboot succeed !!!"
+fi
