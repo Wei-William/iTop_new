@@ -45,7 +45,7 @@
 
 		led3 {
 			label = "red:user";
-			gpios = <&gpk1 1 GPIO_ACTIVE_HIGH>;
+			//gpios = <&gpk1 1 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
 		};
 	};
@@ -202,6 +202,17 @@
                 reset-gpios=<&gpm2 4 1>;
                 initial-mode=<1>;
        };
+
+	leds_test_node:leds_test_node {
+				compatible = "leds_test";
+				status = "disabled";
+				gpios1 = <&gpl2 0 GPIO_ACTIVE_HIGH>;
+				gpios2 = <&gpk1 1 GPIO_ACTIVE_HIGH>;
+		};
+};
+
+&leds_test_node{
+	status = "okay";
 };
 
 &adc {
