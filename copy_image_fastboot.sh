@@ -25,10 +25,10 @@ else
 	echo "copy exynos4412-itop-elite.dtb to fastboot succeed !!!"
 fi
 
-if [ ! -f system-make/system.img ]
+if [ ! -f system_linux/system.img ]
 then
 	echo "cannot find system !!!"
 else
-	cp system-make/system.img /mnt/hgfs/fastboot/
+	cp system_linux/system.img /mnt/hgfs/fastboot/
 	echo "copy system.img to fastboot succeed !!!"
 fi
